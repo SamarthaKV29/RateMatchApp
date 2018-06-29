@@ -1,0 +1,421 @@
+id,postal_code,city,state
+1,01105,Springfield,MA
+2,01114,Springfield,MA
+3,01129,Springfield,MA
+4,01152,Springfield,MA
+5,01605,Worcester,MA
+6,01610,Worcester,MA
+7,01654,Worcester,MA
+8,01813,Woburn,MA
+9,02104,Boston,MA
+10,02109,Boston,MA
+11,02114,Boston,MA
+12,02124,Boston,MA
+13,02142,Cambridge,MA
+14,02162,Newton,MA
+15,02163,Boston,MA
+16,02203,Boston,MA
+17,02208,Boston,MA
+18,02216,Boston,MA
+19,02283,Boston,MA
+20,02305,Brockton,MA
+21,02405,Brockton,MA
+22,02453,Waltham,MA
+23,02458,Newton,MA
+24,02472,Watertown,MA
+25,02745,New Bedford,MA
+26,06105,Hartford,CT
+27,06120,Hartford,CT
+28,06127,West Hartford,CT
+29,06145,Hartford,CT
+30,06152,Hartford,CT
+31,06160,Hartford,CT
+32,06183,Hartford,CT
+33,06505,New Haven,CT
+34,06510,New Haven,CT
+35,06520,New Haven,CT
+36,06533,New Haven,CT
+37,06538,New Haven,CT
+38,06606,Bridgeport,CT
+39,06673,Bridgeport,CT
+40,06705,Waterbury,CT
+41,06721,Waterbury,CT
+42,06816,Danbury,CT
+43,06825,Fairfield,CT
+44,06854,Norwalk,CT
+45,06905,Stamford,CT
+46,06912,Stamford,CT
+47,06922,Stamford,CT
+48,07104,Newark,NJ
+49,07112,Newark,NJ
+50,07188,Newark,NJ
+51,07195,Newark,NJ
+52,07208,Elizabeth,NJ
+53,07305,Jersey City,NJ
+54,07310,Jersey City,NJ
+55,07505,Paterson,NJ
+56,07522,Paterson,NJ
+57,07544,Paterson,NJ
+58,08104,Camden,NJ
+59,08603,Trenton,NJ
+60,08608,Trenton,NJ
+61,08619,Trenton,NJ
+62,08638,Trenton,NJ
+63,08650,Trenton,NJ
+64,08695,Trenton,NJ
+65,08922,New Brunswick,NJ
+66,10009,New York City,NY
+67,10014,New York City,NY
+68,10019,New York City,NY
+69,10024,New York City,NY
+70,10029,New York City,NY
+71,10034,New York City,NY
+72,10039,New York City,NY
+73,10045,New York City,NY
+74,10060,New York City,NY
+75,10079,New York City,NY
+76,10090,New York City,NY
+77,10099,New York City,NY
+78,10105,New York City,NY
+79,10115,New York City,NY
+80,10120,New York City,NY
+81,10125,New York City,NY
+82,10131,New York City,NY
+83,10150,New York City,NY
+84,10155,New York City,NY
+85,10160,New York City,NY
+86,10165,New York City,NY
+87,10170,New York City,NY
+88,10175,New York City,NY
+89,10184,New York City,NY
+90,10203,New York City,NY
+91,10249,New York City,NY
+92,10270,New York City,NY
+93,10275,New York City,NY
+94,10280,New York City,NY
+95,10292,New York City,NY
+96,10305,Staten Island,NY
+97,10310,Staten Island,NY
+98,10454,Bronx,NY
+99,10459,Bronx,NY
+100,10464,Bronx,NY
+101,10469,Bronx,NY
+102,10474,Bronx,NY
+103,10557,Mount Vernon,NY
+104,10633,White Plains,NY
+105,10705,Yonkers,NY
+106,11024,Great Neck,NY
+107,11044,New Hyde Park,NY
+108,11054,Port Washington,NY
+109,11205,Brooklyn,NY
+110,11210,Brooklyn,NY
+111,11215,Brooklyn,NY
+112,11220,Brooklyn,NY
+113,11225,Brooklyn,NY
+114,11231,Brooklyn,NY
+115,11236,Brooklyn,NY
+116,11241,Brooklyn,NY
+117,11247,Brooklyn,NY
+118,11254,Brooklyn,NY
+119,11407,Jamaica,NY
+120,11431,Jamaica,NY
+121,11436,Jamaica,NY
+122,11447,Jamaica,NY
+123,11470,Jamaica,NY
+124,11499,Jamaica,NY
+125,11854,Hicksville,NY
+126,12205,Albany,NY
+127,12222,Albany,NY
+128,12227,Albany,NY
+129,12232,Albany,NY
+130,12237,Albany,NY
+131,12242,Albany,NY
+132,12255,Albany,NY
+133,12262,Albany,NY
+134,12305,Schenectady,NY
+135,12325,Schenectady,NY
+136,13205,Syracuse,NY
+137,13210,Syracuse,NY
+138,13217,Syracuse,NY
+139,13224,Syracuse,NY
+140,13251,Syracuse,NY
+141,13505,Utica,NY
+142,14210,Buffalo,NY
+143,14215,Buffalo,NY
+144,14225,Buffalo,NY
+145,14233,Buffalo,NY
+146,14263,Buffalo,NY
+147,14269,Buffalo,NY
+148,14604,Rochester,NY
+149,14609,Rochester,NY
+150,14614,Rochester,NY
+151,14619,Rochester,NY
+152,14624,Rochester,NY
+153,14639,Rochester,NY
+154,14646,Rochester,NY
+155,14652,Rochester,NY
+156,14683,Rochester,NY
+157,20167,Sterling,VA
+158,20195,Reston,VA
+159,22070,Herndon,VA
+160,22093,Ashburn,VA
+161,22096,Reston,VA
+162,22119,Merrifield,VA
+163,22156,Springfield,VA
+164,22184,Vienna,VA
+165,22205,Arlington,VA
+166,22212,Arlington,VA
+167,22217,Arlington,VA
+168,22234,Arlington,VA
+169,22244,Arlington,VA
+170,22301,Alexandria,VA
+171,22309,Alexandria,VA
+172,22313,Alexandria,VA
+173,22333,Alexandria,VA
+174,22405,Fredericksburg,VA
+175,22903,Charlottesville,VA
+176,22908,Charlottesville,VA
+177,23203,Richmond,VA
+178,23208,Richmond,VA
+179,23213,Richmond,VA
+180,23220,Richmond,VA
+181,23225,Richmond,VA
+182,23228,Richmond,VA
+183,23237,Richmond,VA
+184,23242,Richmond,VA
+185,23260,Richmond,VA
+186,23272,Richmond,VA
+187,23277,Richmond,VA
+188,23285,Richmond,VA
+189,23293,Richmond,VA
+190,23324,Chesapeake,VA
+191,23436,Suffolk,VA
+192,23454,Virginia Beach,VA
+193,23459,Virginia Beach,VA
+194,23464,Virginia Beach,VA
+195,23471,Virginia Beach,VA
+196,23504,Norfolk,VA
+197,23509,Norfolk,VA
+198,23514,Norfolk,VA
+199,23520,Norfolk,VA
+200,23605,Newport News,VA
+201,23663,Hampton,VA
+202,23668,Hampton,VA
+203,23705,Portsmouth,VA
+204,24004,Roanoke,VA
+205,24014,Roanoke,VA
+206,24020,Roanoke,VA
+207,24024,Roanoke,VA
+208,24029,Roanoke,VA
+209,24034,Roanoke,VA
+210,24040,Roanoke,VA
+211,24048,Roanoke,VA
+212,24503,Lynchburg,VA
+213,24515,Lynchburg,VA
+214,90005,Los Angeles,CA
+215,90010,Los Angeles,CA
+216,90020,Los Angeles,CA
+217,90025,Los Angeles,CA
+218,90030,Los Angeles,CA
+219,90035,Los Angeles,CA
+220,90040,Los Angeles,CA
+221,90055,Los Angeles,CA
+222,90060,Los Angeles,CA
+223,90065,Los Angeles,CA
+224,90071,Los Angeles,CA
+225,90076,Los Angeles,CA
+226,90087,Los Angeles,CA
+227,90094,Los Angeles,CA
+228,90101,Los Angeles,CA
+229,90189,Los Angeles,CA
+230,90305,Inglewood,CA
+231,90310,Inglewood,CA
+232,90398,Inglewood,CA
+233,90405,Santa Monica,CA
+234,90410,Santa Monica,CA
+235,90505,Torrance,CA
+236,90510,Torrance,CA
+237,90605,Whittier,CA
+238,90610,Whittier,CA
+239,90805,Long Beach,CA
+240,90810,Long Beach,CA
+241,90831,Long Beach,CA
+242,90840,Long Beach,CA
+243,90847,Long Beach,CA
+244,91103,Pasadena,CA
+245,91109,Pasadena,CA
+246,91117,Pasadena,CA
+247,91125,Pasadena,CA
+248,91131,Pasadena,CA
+249,91199,Pasadena,CA
+250,91205,Glendale,CA
+251,91406,Van Nuys,CA
+252,91411,Van Nuys,CA
+253,91499,Van Nuys,CA
+254,91520,Burbank,CA
+255,91606,North Hollywood,CA
+256,91616,North Hollywood,CA
+257,91797,Pomona,CA
+258,91841,Alhambra,CA
+259,91913,Chula Vista,CA
+260,92056,Oceanside,CA
+261,92105,San Diego,CA
+262,92110,San Diego,CA
+263,92115,San Diego,CA
+264,92127,San Diego,CA
+265,92132,San Diego,CA
+266,92145,San Diego,CA
+267,92153,San Diego,CA
+268,92160,San Diego,CA
+269,92165,San Diego,CA
+270,92170,San Diego,CA
+271,92176,San Diego,CA
+272,92186,San Diego,CA
+273,92191,San Diego,CA
+274,92405,San Bernardino,CA
+275,92410,San Bernardino,CA
+276,92415,San Bernardino,CA
+277,92424,San Bernardino,CA
+278,92513,Riverside,CA
+279,92519,Riverside,CA
+280,92555,Moreno Valley,CA
+281,92612,Irvine,CA
+282,92619,Irvine,CA
+283,92645,Garden Grove,CA
+284,92648,Huntington Beach,CA
+285,92662,Newport Beach,CA
+286,92668,Orange,CA
+287,92705,Santa Ana,CA
+288,92710,Irvine,CA
+289,92805,Anaheim,CA
+290,92812,Anaheim,CA
+291,92822,Brea,CA
+292,92825,Anaheim,CA
+293,92835,Fullerton,CA
+294,92862,Orange,CA
+295,92867,Orange,CA
+296,92878,Corona,CA
+297,92883,Corona,CA
+298,93005,Ventura,CA
+299,93034,Oxnard,CA
+300,93094,Simi Valley,CA
+301,93106,Santa Barbara,CA
+302,93111,Santa Barbara,CA
+303,93150,Santa Barbara,CA
+304,93291,Visalia,CA
+305,93305,Bakersfield,CA
+306,93311,Bakersfield,CA
+307,93381,Bakersfield,CA
+308,93386,Bakersfield,CA
+309,93399,Bakersfield,CA
+310,93407,San Luis Obispo,CA
+311,93584,Lancaster,CA
+312,93591,Palmdale,CA
+313,93704,Fresno,CA
+314,93709,Fresno,CA
+315,93715,Fresno,CA
+316,93721,Fresno,CA
+317,93726,Fresno,CA
+318,93740,Fresno,CA
+319,93750,Fresno,CA
+320,93762,Fresno,CA
+321,93778,Fresno,CA
+322,93786,Fresno,CA
+323,93907,Salinas,CA
+324,94042,Mountain View,CA
+325,94089,Sunnyvale,CA
+326,94105,San Francisco,CA
+327,94110,San Francisco,CA
+328,94116,San Francisco,CA
+329,94121,San Francisco,CA
+330,94126,San Francisco,CA
+331,94137,San Francisco,CA
+332,94142,San Francisco,CA
+333,94147,San Francisco,CA
+334,94159,San Francisco,CA
+335,94164,San Francisco,CA
+336,94169,San Francisco,CA
+337,94177,San Francisco,CA
+338,94207,Sacramento,CA
+339,94230,Sacramento,CA
+340,94237,Sacramento,CA
+341,94250,Sacramento,CA
+342,94257,Sacramento,CA
+343,94263,Sacramento,CA
+344,94273,Sacramento,CA
+345,94280,Sacramento,CA
+346,94286,Sacramento,CA
+347,94291,Sacramento,CA
+348,94297,Sacramento,CA
+349,94302,Palo Alto,CA
+350,94405,San Mateo,CA
+351,94522,Concord,CA
+352,94605,Oakland,CA
+353,94611,Oakland,CA
+354,94616,Oakland,CA
+355,94622,Oakland,CA
+356,94627,Oakland,CA
+357,94660,Oakland,CA
+358,94712,Berkeley,CA
+359,94807,Richmond,CA
+360,94913,San Rafael,CA
+361,94975,Petaluma,CA
+362,95054,Santa Clara,CA
+363,95064,Santa Cruz,CA
+364,95113,San Jose,CA
+365,95118,San Jose,CA
+366,95123,San Jose,CA
+367,95128,San Jose,CA
+368,95133,San Jose,CA
+369,95138,San Jose,CA
+370,95150,San Jose,CA
+371,95160,San Jose,CA
+372,95173,San Jose,CA
+373,95194,San Jose,CA
+374,95205,Stockton,CA
+375,95210,Stockton,CA
+376,95219,Stockton,CA
+377,95298,Stockton,CA
+378,95354,Modesto,CA
+379,95397,Modesto,CA
+380,95813,Sacramento,CA
+381,95823,Sacramento,CA
+382,95833,Sacramento,CA
+383,95838,Sacramento,CA
+384,95852,Sacramento,CA
+385,95865,Sacramento,CA
+386,95973,Chico,CA
+387,96154,South Lake Tahoe,CA
+388,98008,Bellevue,WA
+389,98042,Kent,WA
+390,98104,Seattle,WA
+391,98109,Seattle,WA
+392,98115,Seattle,WA
+393,98133,Seattle,WA
+394,98148,Seattle,WA
+395,98158,Seattle,WA
+396,98166,Seattle,WA
+397,98175,Seattle,WA
+398,98185,Seattle,WA
+399,98195,Seattle,WA
+400,98206,Everett,WA
+401,98405,Tacoma,WA
+402,98411,Tacoma,WA
+403,98417,Tacoma,WA
+404,98424,Tacoma,WA
+405,98442,Tacoma,WA
+406,98464,Tacoma,WA
+407,98481,Tacoma,WA
+408,98498,Lakewood,WA
+409,98506,Olympia,WA
+410,98516,Olympia,WA
+411,98664,Vancouver,WA
+412,98682,Vancouver,WA
+413,98687,Vancouver,WA
+414,98907,Yakima,WA
+415,99205,Spokane,WA
+416,99210,Spokane,WA
+417,99215,Spokane,WA
+418,99220,Spokane,WA
+419,99252,Spokane,WA
+420,99260,Spokane,WA

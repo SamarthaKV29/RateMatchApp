@@ -1,0 +1,101 @@
+id,carrier_name,rate,calculation_type
+1,Bednar-Torp,17.2468,QUANTITY
+2,"Gutkowski, Rodriguez and Gutmann",0.1156,PER_POUND
+3,Mohr and Sons,16.1489,QUANTITY
+4,Kihn-O'Kon,0.531,PER_POUND
+5,Sauer-DuBuque,11.2416,QUANTITY
+6,Kunde LLC,12.8423,QUANTITY
+7,Abshire-Lang,15.6403,QUANTITY
+8,"Padberg, Hahn and Daugherty",13.9459,QUANTITY
+9,"Prosacco, Kiehn and Kunze",17.3419,QUANTITY
+10,Schumm-Abshire,0.3055,PER_POUND
+11,"Nader, Grant and Hamill",0.1534,PER_POUND
+12,Schaefer-Yundt,0.1518,PER_POUND
+13,"Hauck, Carroll and Wuckert",14.5424,QUANTITY
+14,Johnston LLC,14.1422,QUANTITY
+15,Wunsch-Heaney,0.462,PER_POUND
+16,Crooks Group,0.6273,PER_POUND
+17,Shields-Stiedemann,14.2493,QUANTITY
+18,"Quigley, Quigley and Skiles",0.192,PER_POUND
+19,"Bartoletti, Green and Langworth",0.5214,PER_POUND
+20,Borer-Ebert,11.4495,QUANTITY
+21,"Little, Powlowski and Stiedemann",0.746,PER_POUND
+22,Fay Group,0.1615,PER_POUND
+23,"Koepp, Dach and Schoen",15.5457,QUANTITY
+24,"Jones, Leffler and Moore",16.6407,QUANTITY
+25,Beier Group,0.4717,PER_POUND
+26,"Price, Hettinger and Metz",0.2926,PER_POUND
+27,Mosciski LLC,0.1996,PER_POUND
+28,"Wolf, Lind and Torphy",13.842,QUANTITY
+29,Hintz-Thiel,15.5433,QUANTITY
+30,Ernser Inc,16.8437,QUANTITY
+31,Pacocha Group,17.8493,QUANTITY
+32,Connelly LLC,0.3504,PER_POUND
+33,Gerlach Inc,14.1492,QUANTITY
+34,Homenick and Sons,16.3476,QUANTITY
+35,"Harris, Walsh and Quigley",0.3442,PER_POUND
+36,"Jones, McKenzie and Robel",0.7019,PER_POUND
+37,Ledner-Bosco,13.3475,QUANTITY
+38,Tromp-Wolff,13.1419,QUANTITY
+39,Larson-Batz,17.7437,QUANTITY
+40,Bailey Inc,0.4868,PER_POUND
+41,Veum-Fahey,0.3241,PER_POUND
+42,McKenzie LLC,15.4464,QUANTITY
+43,"Wunsch, Dickinson and Reilly",12.1483,QUANTITY
+44,"Waelchi, Deckow and Pagac",17.2489,QUANTITY
+45,Mitchell-Conroy,12.949,QUANTITY
+46,Renner-Torp,0.489,PER_POUND
+47,"Turner, Marks and Moore",0.6055,PER_POUND
+48,"Schneider, Roberts and Herman",17.8431,QUANTITY
+49,"Pagac, Hayes and Stanton",14.1412,QUANTITY
+50,"Adams, Mertz and Luettgen",0.2981,PER_POUND
+51,Huels Inc,13.5463,QUANTITY
+52,Ernser Inc,14.6481,QUANTITY
+53,"Herman, Predovic and Nikolaus",13.3401,QUANTITY
+54,Ritchie Inc,0.2152,PER_POUND
+55,Dietrich Inc,11.5455,QUANTITY
+56,Ritchie-Pfannerstill,11.0417,QUANTITY
+57,"McLaughlin, Boyle and Padberg",12.2446,QUANTITY
+58,Raynor-Gottlieb,0.405,PER_POUND
+59,"Buckridge, Schuppe and Huels",0.5675,PER_POUND
+60,Raynor-Herman,0.6689,PER_POUND
+61,"Leuschke, Hills and Welch",11.5488,QUANTITY
+62,Abbott-McGlynn,0.3311,PER_POUND
+63,"Wehner, Padberg and Hane",16.3415,QUANTITY
+64,"Cartwright, Johns and Hagenes",0.3725,PER_POUND
+65,Runte-Wisozk,11.7407,QUANTITY
+66,Murray Inc,11.0493,QUANTITY
+67,Deckow-Cole,12.5451,QUANTITY
+68,O'Reilly Inc,0.6849,PER_POUND
+69,"Wiza, Will and Huels",0.7196,PER_POUND
+70,Trantow Group,11.9483,QUANTITY
+71,Schaden and Sons,0.4079,PER_POUND
+72,"Tromp, Walsh and Mueller",13.7465,QUANTITY
+73,"Gerhold, Considine and Boehm",13.5457,QUANTITY
+74,Stamm Inc,13.449,QUANTITY
+75,Bradtke-O'Keefe,11.2411,QUANTITY
+76,Botsford-Streich,16.6461,QUANTITY
+77,Howell Group,17.9496,QUANTITY
+78,Mills-Smith,0.5032,PER_POUND
+79,Nienow-Kshlerin,0.1832,PER_POUND
+80,Erdman-Bogisich,0.7866,PER_POUND
+81,"Murazik, Lebsack and Fritsch",0.3724,PER_POUND
+82,Fahey-Bayer,16.7401,QUANTITY
+83,Rogahn Inc,0.5766,PER_POUND
+84,Luettgen-D'Amore,0.4444,PER_POUND
+85,"Predovic, Kuphal and Schaefer",16.7436,QUANTITY
+86,Bogisich LLC,16.2431,QUANTITY
+87,"Kirlin, Fadel and Nikolaus",0.6075,PER_POUND
+88,"Harvey, Daugherty and Carroll",0.7081,PER_POUND
+89,Borer-Schiller,11.1433,QUANTITY
+90,Graham-Batz,14.344,QUANTITY
+91,O'Kon and Sons,15.1445,QUANTITY
+92,"Nikolaus, Goyette and O'Connell",0.7825,PER_POUND
+93,Swaniawski Group,14.3411,QUANTITY
+94,Lehner-Cartwright,15.2404,QUANTITY
+95,Feil-Kilback,13.1467,QUANTITY
+96,Stroman-Stoltenberg,0.1648,PER_POUND
+97,Goyette and Sons,0.2594,PER_POUND
+98,Prohaska Inc,0.538,PER_POUND
+99,"Collier, Zemlak and Barrows",0.6504,PER_POUND
+100,Bogisich-Parker,0.6642,PER_POUND
