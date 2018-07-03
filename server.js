@@ -50,6 +50,8 @@ app.get('', (req, res) => {
     res.sendFile(__dirname + '/dist/kuebix-app/index.html');
 });
 
+
+
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.setHeader('Access-Control-Allow-Origin', 'https://kuebixratematch.herokuapp.com');
@@ -68,3 +70,6 @@ app.get('/api/v1/matchcrit', (req, res) => {
     return res.json(matchcrit);
 });
 
+app.get('*', (req, res) => {
+    res.redirect('');
+});
