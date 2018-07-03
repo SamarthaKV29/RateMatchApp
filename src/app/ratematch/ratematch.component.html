@@ -1,0 +1,158 @@
+<div class="row">
+  <div class="col">
+    <form [formGroup]="originForm">
+      <h5>Origin</h5>
+      <div class="form-group">
+        <label class="center-block ">State:
+          <select class="form-control" formControlName="state" (change)="getZips()">
+            <option *ngFor="let state of states" [value]="state">{{state}}</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-group" *ngIf="zips.length > 0 && origin" (change)="setOrigin()">
+        <label class="center-block">Zip:
+          <select class="form-control" formControlName="zip">
+            <option *ngFor="let zip of zips" [value]="zip">{{zip.split("|")}}</option>
+          </select>
+        </label>
+      </div>
+    </form>
+  </div>
+  <div class="col">
+    <form [formGroup]="destForm">
+      <h5>Destination</h5>
+      <div class="form-group">
+        <label class="center-block ">State:
+          <select class="form-control" formControlName="state" (change)="getZips()">
+            <option *ngFor="let state of states" [value]="state">{{state}}</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-group" *ngIf="zips.length > 0 && !origin" (change)="setDest()">
+        <label class="center-block">Zip:
+          <select class="form-control" formControlName="zip">
+            <option *ngFor="let zip of zips" [value]="zip">{{zip.split("|")}}</option>
+          </select>
+        </label>
+      </div>
+    </form>
+  </div>
+  <div class="col-3">
+    <form [formGroup]="lineItemForm">
+      <h4>Item Details</h4>
+      <div class="form-group">
+        <label class="center-block">Quantity
+          <input class="form-control dim-item" formControlName="quantity" type="number" min="1" step="1" />
+        </label>
+        <label class="center-block">Weight
+          <input class="form-control dim-item" formControlName="weight" type="number" min="1" />
+        </label>
+        <label class="center-block">Packaging Type
+          <select class="form-control" formControlName="packtype" required>
+            <option value="Box">Box</option>
+            <option value="Pallet">Pallet</option>
+          </select>
+        </label>
+      </div>
+      <div formGroupName="dimensions">
+        <h5>Dimensions</h5>
+        <div class="form-group dim">
+          <label>Length
+            <input class="form-control dim-item" formControlName="l" type="number" step="1" min="1" />
+          </label>
+          <label>Width
+            <input class="form-control dim-item" formControlName="w" type="number" step="1" min="1" />
+          </label>
+          <label>Height
+            <input class="form-control dim-item" formControlName="h" type="number" step="1" min="1" />
+          </label>
+        </div>
+      </div>
+      <div class="card m-1 p-1 bg-warning" *ngIf="errlineItem">{{errlineItem}}</div>
+      <button type="button" class="btn btn-success" (click)="addItem()">Add</button>
+      <button type="button" class="btn btn-warning" (click)="removeItem()">Remove Last</button>
+
+    </form>
+  </div>
+  <div class="col" *ngIf="selectedOrigin">
+    <div class="card">
+      <div class="card-header">Origin Details</div>
+      <div class="card-body">
+        <p>
+          <strong>City</strong> {{selectedOrigin.city}}
+        </p>
+        <p>
+          <strong>State</strong> {{selectedOrigin.state}}
+        </p>
+        <p>
+          <strong>Zip</strong> {{selectedOrigin.postal_code}}
+        </p>
+        <button class="btn btn-success" (click)="genRes()">Generate Results</button>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngIf="selectedDest">
+    <div class="card">
+      <div class="card-header">Destination Details</div>
+      <div class="card-body">
+        <p>
+          <strong>City</strong> {{selectedDest.city}}
+        </p>
+        <p>
+          <strong>State</strong> {{selectedDest.state}}
+        </p>
+        <p>
+          <strong>Zip</strong> {{selectedDest.postal_code}}
+        </p>
+        <button class="btn btn-success" (click)="genRes()">Generate Results</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row my-4">
+  <div class="col">
+    <div class="card" *ngIf="lineItems.length > 0">
+      <div class="card-header">
+        <h4>Line Items</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <li *ngFor="let l of lineItems" class="alert alert-info">
+            Quantity:
+            <div class="badge badge-primary">{{l.quantity}}</div>
+            Dimensions:
+            <div class="badge badge-danger">{{l.dimensions.l}}' x {{l.dimensions.w}}' x {{l.dimensions.h}}'</div>
+            Weight:
+            <div class="badge badge-primary">{{l.weight}} lb</div>
+            Packaging Type:
+            <div class="badge badge-warning">{{l.packtype}}</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngIf="results.length > 0">
+    <div class="card">
+      <div class="card-header">
+        <nav class="navbar navbar-light bg-light">
+          <h4 class="navbar-brand">Results</h4>
+          <form class="form-inline" [formGroup]="lineItemSearch">
+            <input class="form-control mr-sm-2" formControlName="squery" placeholder="Search" aria-label="Search" (keypress)="searchItems()"
+              (keyup)="searchItems()" />
+            <i class="material-icons">search</i>
+          </form>
+        </nav>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li *ngFor="let res of filteredRes">
+            <div class="alert alert-info rounded font-weight-bold"> {{res.carriername}}
+              <div class="badge badge-pill badge-warning"> $ {{res.price}}</div>
+              <div class="badge badge-light"> Type: {{res.calctype}}</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
