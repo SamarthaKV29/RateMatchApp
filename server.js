@@ -46,7 +46,7 @@ app.use(express.static(__dirname + '/dist'));
 var distDir = __dirname + "/dist/kuebix-app";
 app.use(express.static(distDir));
 
-app.get('*', (req, res) => {
+app.get('', (req, res) => {
     res.sendFile(__dirname + '/dist/kuebix-app/index.html');
 });
 

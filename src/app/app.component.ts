@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   ngOnInit(): void {
-    this.router.navigate(['/ratematch']);
+    this.router.navigate(['']);
   }
 
   constructor(private router: Router) {
