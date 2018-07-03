@@ -71,5 +71,5 @@ app.get('/api/v1/matchcrit', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-    res.redirect('');
+    res.redirect('/');
 });

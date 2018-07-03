@@ -5430,7 +5430,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 var routes = [
-    { path: "ratematch", component: _ratematch_ratematch_component__WEBPACK_IMPORTED_MODULE_2__["RatematchComponent"] },
+    { path: '', component: _ratematch_ratematch_component__WEBPACK_IMPORTED_MODULE_2__["RatematchComponent"], pathMatch: 'full' },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -5498,7 +5498,7 @@ var AppComponent = /** @class */ (function () {
         this.router = router;
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.router.navigate(['/ratematch']);
+        this.router.navigate(['']);
     };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -5817,13 +5817,13 @@ var DataService = /** @class */ (function () {
         this.http = http;
     }
     DataService.prototype.getRates = function () {
-        return this.http.get("http://localhost:4500/api/v1/rates");
+        return this.http.get("https://kuebixratematch.herokuapp.com/api/v1/rates");
     };
     DataService.prototype.getLocations = function () {
-        return this.http.get("http://localhost:4500/api/v1/locations");
+        return this.http.get("https://kuebixratematch.herokuapp.com/api/v1/locations");
     };
     DataService.prototype.getMatchCrits = function () {
-        return this.http.get("http://localhost:4500/api/v1/matchcrit");
+        return this.http.get("https://kuebixratematch.herokuapp.com/api/v1/matchcrit");
     };
     DataService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
