@@ -11,12 +11,12 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getRates(): Observable<Rate[]> {
-    return this.http.get<Rate[]>("http://localhost:4500/api/v1/rates");
+    return this.http.get<Rate[]>("https://kuebixratematch.herokuapp.com/api/v1/rates");
   }
   getLocations(): Observable<RLocation[]> {
-    return this.http.get<RLocation[]>("http://localhost:4500/api/v1/locations");
+    return this.http.get<RLocation[]>("https://kuebixratematch.herokuapp.com/api/v1/locations");
   }
   getMatchCrits(): Observable<RMC[]> {
-    return this.http.get<RMC[]>("http://localhost:4500/api/v1/matchcrit");
+    return this.http.get<RMC[]>("https://kuebixratematch.herokuapp.com/api/v1/matchcrit");
   }
 }
