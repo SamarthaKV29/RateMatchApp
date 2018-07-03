@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RatematchComponent } from './ratematch/ratematch.component';
 const routes: Routes = [
-  { path: "ratematch", component: RatematchComponent },
+  { path: "/", component: RatematchComponent },
 ];
 
 @NgModule({
