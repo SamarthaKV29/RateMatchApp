@@ -1,80 +1,104 @@
 <div class="row">
-  <div class="col">
-    <form [formGroup]="originForm">
-      <h5>Origin</h5>
-      <div class="form-group">
-        <label class="center-block ">State:
-          <select class="form-control" formControlName="state" (change)="getZips()">
-            <option *ngFor="let state of states" [value]="state">{{state}}</option>
-          </select>
-        </label>
+  <!--Origin Form-->
+  <div class="col-sm-6 col-md-4 col-lg-2">
+    <div class="card">
+      <div class="card-header">
+        <h5>Origin</h5>
       </div>
-      <div class="form-group" *ngIf="zips.length > 0 && origin" (change)="setOrigin()">
-        <label class="center-block">Zip:
-          <select class="form-control" formControlName="zip">
-            <option *ngFor="let zip of zips" [value]="zip">{{zip.split("|")}}</option>
-          </select>
-        </label>
-      </div>
-    </form>
-  </div>
-  <div class="col">
-    <form [formGroup]="destForm">
-      <h5>Destination</h5>
-      <div class="form-group">
-        <label class="center-block ">State:
-          <select class="form-control" formControlName="state" (change)="getZips()">
-            <option *ngFor="let state of states" [value]="state">{{state}}</option>
-          </select>
-        </label>
-      </div>
-      <div class="form-group" *ngIf="zips.length > 0 && !origin" (change)="setDest()">
-        <label class="center-block">Zip:
-          <select class="form-control" formControlName="zip">
-            <option *ngFor="let zip of zips" [value]="zip">{{zip.split("|")}}</option>
-          </select>
-        </label>
-      </div>
-    </form>
-  </div>
-  <div class="col-3">
-    <form [formGroup]="lineItemForm">
-      <h4>Item Details</h4>
-      <div class="form-group">
-        <label class="center-block">Quantity
-          <input class="form-control dim-item" formControlName="quantity" type="number" min="1" step="1" />
-        </label>
-        <label class="center-block">Weight
-          <input class="form-control dim-item" formControlName="weight" type="number" min="1" />
-        </label>
-        <label class="center-block">Packaging Type
-          <select class="form-control" formControlName="packtype" required>
-            <option value="Box">Box</option>
-            <option value="Pallet">Pallet</option>
-          </select>
-        </label>
-      </div>
-      <div formGroupName="dimensions">
-        <h5>Dimensions</h5>
-        <div class="form-group dim">
-          <label>Length
-            <input class="form-control dim-item" formControlName="l" type="number" step="1" min="1" />
-          </label>
-          <label>Width
-            <input class="form-control dim-item" formControlName="w" type="number" step="1" min="1" />
-          </label>
-          <label>Height
-            <input class="form-control dim-item" formControlName="h" type="number" step="1" min="1" />
-          </label>
-        </div>
-      </div>
-      <div class="card m-1 p-1 bg-warning" *ngIf="errlineItem">{{errlineItem}}</div>
-      <button type="button" class="btn btn-success" (click)="addItem()">Add</button>
-      <button type="button" class="btn btn-warning" (click)="removeItem()">Remove Last</button>
+      <div class="card-body">
+        <form [formGroup]="originForm">
 
-    </form>
+          <div class="form-group">
+            <label class="center-block ">State:
+              <select class="form-control" formControlName="state" (change)="getZips()">
+                <option *ngFor="let state of states" [value]="state">{{state}}</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-group" *ngIf="zips.length > 0 && origin" (change)="setOrigin()">
+            <label class="center-block">Zip:
+              <select class="form-control" formControlName="zip">
+                <option *ngFor="let zip of zips" [value]="zip">{{zip.split("|")}}</option>
+              </select>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-  <div class="col" *ngIf="selectedOrigin">
+  <!--Dest Form-->
+  <div class="col-sm-6 col-md-4 col-lg-2">
+    <div class="card">
+      <div class="card-header">
+        <h5>Destination</h5>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="destForm">
+          <div class="form-group">
+            <label class="center-block ">State:
+              <select class="form-control" formControlName="state" (change)="getZips()">
+                <option *ngFor="let state of states" [value]="state">{{state}}</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-group" *ngIf="zips.length > 0 && !origin" (change)="setDest()">
+            <label class="center-block">Zip:
+              <select class="form-control" formControlName="zip">
+                <option *ngFor="let zip of zips" [value]="zip">{{zip.split("|")}}</option>
+              </select>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--Item Form-->
+  <div class="col-sm-8 col-md-6 col-lg-4">
+    <div class="card">
+      <div class="card-header">
+        <h4>Item Details</h4>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="lineItemForm">
+
+          <div class="form-group">
+            <label class="center-block">Quantity
+              <input class="form-control dim-item" formControlName="quantity" type="number" min="1" step="1" />
+            </label>
+            <label class="center-block">Weight
+              <input class="form-control dim-item" formControlName="weight" type="number" min="1" />
+            </label>
+            <label class="center-block">Packaging Type
+              <select class="form-control" formControlName="packtype" required>
+                <option value="Box">Box</option>
+                <option value="Pallet">Pallet</option>
+              </select>
+            </label>
+          </div>
+          <div formGroupName="dimensions">
+            <h5>Dimensions</h5>
+            <div class="form-group dim">
+              <label>Length
+                <input class="form-control dim-item" formControlName="l" type="number" step="1" min="1" />
+              </label>
+              <label>Width
+                <input class="form-control dim-item" formControlName="w" type="number" step="1" min="1" />
+              </label>
+              <label>Height
+                <input class="form-control dim-item" formControlName="h" type="number" step="1" min="1" />
+              </label>
+            </div>
+          </div>
+          <div class="card m-1 p-1 bg-warning" *ngIf="errlineItem">{{errlineItem}}</div>
+          <button type="button" class="btn btn-success" (click)="addItem()">Add</button>
+          <button type="button" class="btn btn-warning" (click)="removeItem()">Remove Last</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--View Origin details Form-->
+  <div class="col-sm-4 col-md-2 col-lg-2" *ngIf="selectedOrigin">
     <div class="card">
       <div class="card-header">Origin Details</div>
       <div class="card-body">
@@ -91,7 +115,8 @@
       </div>
     </div>
   </div>
-  <div class="col" *ngIf="selectedDest">
+  <!--View Dest details Form-->
+  <div class="col-sm-4 col-md-2 col-lg-2" *ngIf="selectedDest">
     <div class="card">
       <div class="card-header">Destination Details</div>
       <div class="card-body">
@@ -110,7 +135,8 @@
   </div>
 </div>
 <div class="row my-4">
-  <div class="col">
+  <!--Line Items Form-->
+  <div class="col-sm-12 col-md-8 col-lg-6">
     <div class="card" *ngIf="lineItems.length > 0">
       <div class="card-header">
         <h4>Line Items</h4>
@@ -131,7 +157,8 @@
       </div>
     </div>
   </div>
-  <div class="col" *ngIf="results.length > 0">
+  <!--Results View-->
+  <div class="col-sm-12 col-md-8 col-lg-6" *ngIf="results.length > 0">
     <div class="card">
       <div class="card-header">
         <nav class="navbar navbar-light bg-light">
