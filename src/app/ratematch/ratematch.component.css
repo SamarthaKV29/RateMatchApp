@@ -14,3 +14,7 @@ label{
     font-size: 0.9em;
     font-weight: 500;
 }
+
+.card-body{
+    min-height: 300px;
+}

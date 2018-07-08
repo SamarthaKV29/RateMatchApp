@@ -176,7 +176,7 @@ export class RatematchComponent {
     else {
       return {
         carriername: r.carrier_name,
-        price: parseFloat((r.rate * w).toPrecision(3)),
+        price: parseFloat((r.rate * w * q).toPrecision(3)),
         calctype: r.calculation_type
       }
     }
