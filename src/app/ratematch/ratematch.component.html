@@ -9,6 +9,10 @@
             <input class="form-control mr-sm-2" formControlName="squery" placeholder="Search" aria-label="Search" (keypress)="searchItems()"
               (keyup)="searchItems()" />
             <i class="material-icons d-none d-xs-none d-sm-none d-md-block d-lg-block">search</i>
+            <select formControlName="selectSort" class="form-control mr-sm-2" placeholder="Sorting" aria-label="Sorting">
+              <option value="1">Name</option>
+              <option value="2">Price Low to High</option>
+            </select>
           </form>
         </nav>
       </div>
