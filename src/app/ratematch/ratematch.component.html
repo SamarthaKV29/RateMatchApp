@@ -1,18 +1,32 @@
 <div class="row py-1 mx-auto">
   <!--Results View-->
   <div class="col-sm-12 col-md-12 col-lg-12" *ngIf="results.length > 0">
-    <div class="card">
-      <div class="card-header">
-        <nav class="navbar navbar-light bg-light">
+    <div class="card bg-main">
+      <div class="card-header bg-second text-light">
+        <nav class="navbar">
           <h5 class="navbar-brand">Results</h5>
           <form class="form-inline" [formGroup]="lineItemSearch">
-            <input class="form-control mr-sm-2" formControlName="squery" placeholder="Search" aria-label="Search" (keypress)="searchItems()"
-              (keyup)="searchItems()" />
-            <i class="material-icons d-none d-xs-none d-sm-none d-md-block d-lg-block">search</i>
-            <select formControlName="selectSort" class="form-control mr-sm-2" placeholder="Sorting" aria-label="Sorting">
-              <option value="1">Name</option>
-              <option value="2">Price Low to High</option>
-            </select>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <i class="material-icons d-none d-xs-none d-sm-none d-md-block d-lg-block input-group-text">search</i>
+              </div>
+              <input class="form-control mr-sm-2" formControlName="squery" placeholder="Search" aria-label="Search" (keypress)="searchItems()"
+                (keyup)="searchItems()">
+            </div>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <i class="material-icons d-none d-xs-none d-sm-none d-md-block d-lg-block input-group-text">reorder</i>
+              </div>
+              <select formControlName="selectSort" class="form-control mr-sm-2" placeholder="Sorting" aria-label="Sorting" (change)="reSort()">
+
+                <option value="1">
+                  by Name
+                </option>
+                <option value="2">
+                  by Price
+                </option>
+              </select>
+            </div>
           </form>
         </nav>
       </div>
@@ -30,27 +44,27 @@
   </div>
 </div>
 <div class="row  py-1 mx-auto">
-
   <div class="col-xs-12 col-sm-10 col-md-6 col-lg-6">
-    <nav>
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#origin" role="tab" aria-controls="nav-origin"
-          aria-selected="true">Origin</a>
-        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#destination" role="tab" aria-controls="nav-dest"
-          aria-selected="false">Destination</a>
+    <div class="card">
+      <div class="card-header bg-second text-light border-0">
+        <h5>Item Location</h5>
       </div>
-    </nav>
-    <div class="tab-content">
-      <div class="tab-pane fade show active" id="origin" role="tabpanel" aria-labelledby="nav-origin-tab">
-        <div class="row p-1">
-          <!--Origin Form-->
-          <div class="col-sm-6 col-md-6 col-lg-5">
-            <div class="card">
-              <div class="card-header">
-                <h5>Origin</h5>
-              </div>
-              <div class="card-body">
-                <form [formGroup]="originForm">
+
+      <div class="card-body">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link font-weight-bold border-0 active" id="nav-home-tab" data-toggle="tab" href="#origin" role="tab"
+              aria-controls="nav-origin" aria-selected="true">Origin</a>
+            <a class="nav-item nav-link font-weight-bold border-0" id="nav-profile-tab" data-toggle="tab" href="#destination" role="tab"
+              aria-controls="nav-dest" aria-selected="false">Destination</a>
+          </div>
+        </nav>
+        <div class="tab-content ">
+          <div class="tab-pane fade show active bg-main rounded" id="origin" role="tabpanel" aria-labelledby="nav-origin-tab">
+            <div class="row p-1">
+              <!--Origin Form-->
+              <div class="col-sm-6 col-md-6 col-lg-5">
+                <form [formGroup]="originForm" class="m-2 p-1">
 
                   <div class="form-group">
                     <label class="center-block ">State:
@@ -68,15 +82,8 @@
                   </div>
                 </form>
               </div>
-            </div>
-          </div>
-          <!--View Origin details Form-->
-          <div class="col col-xs-6 col-sm-6" *ngIf="selectedOrigin">
-            <div class="card">
-              <div class="card-header">
-                <h5>Origin Details</h5>
-              </div>
-              <div class="card-body">
+              <!--View Origin details Form-->
+              <div class="col col-xs-6 col-sm-6" *ngIf="selectedOrigin">
                 <p>
                   <strong>City</strong> {{selectedOrigin.city}}
                 </p>
@@ -90,18 +97,11 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="destination" role="tabpanel" aria-labelledby="nav-dest-tab">
-        <div class="row p-1">
-          <!--Dest Form-->
-          <div class="col-sm-6 col-md-6 col-lg-5">
-            <div class="card">
-              <div class="card-header">
-                <h5>Destination</h5>
-              </div>
-              <div class="card-body">
-                <form [formGroup]="destForm">
+          <div class="tab-pane fade bg-main rounded" id="destination" role="tabpanel" aria-labelledby="nav-dest-tab">
+            <div class="row p-1 ">
+              <!--Dest Form-->
+              <div class="col-sm-6 col-md-6 col-lg-5">
+                <form [formGroup]="destForm" class="m-2 p-1">
                   <div class="form-group">
                     <label class="center-block ">State:
                       <select class="form-control" formControlName="state" (change)="getZips()">
@@ -118,15 +118,8 @@
                   </div>
                 </form>
               </div>
-            </div>
-          </div>
-          <!--View Dest details Form-->
-          <div class="col col-xs-6 col-sm-6" *ngIf="selectedDest">
-            <div class="card">
-              <div class="card-header">
-                <h5>Destination Details</h5>
-              </div>
-              <div class="card-body">
+              <!--View Dest details Form-->
+              <div class="col col-xs-6 col-sm-6" *ngIf="selectedDest">
                 <p>
                   <strong>City</strong> {{selectedDest.city}}
                 </p>
@@ -145,79 +138,70 @@
     </div>
 
   </div>
-
-
   <div class="col-xs-12 col-sm-10 col-md-6 col-lg-6">
-    <div class="row">
-      <!--Item Form-->
-      <div class="col-sm-12 col-md-8 col-lg-6">
-        <div class="card">
-          <div class="card-header">
-            <h5>Item Details</h5>
-          </div>
-          <div class="card-body">
-            <form [formGroup]="lineItemForm">
-
-              <div class="form-group">
-                <label class="center-block">Quantity
-                  <input class="form-control dim-item" formControlName="quantity" type="number" min="1" step="1" />
-                </label>
-                <label class="center-block">Weight
-                  <input class="form-control dim-item" formControlName="weight" type="number" min="1" />
-                </label>
-                <label class="center-block">Packaging Type
-                  <select class="form-control" formControlName="packtype" required>
-                    <option value="Box">Box</option>
-                    <option value="Pallet">Pallet</option>
-                  </select>
-                </label>
-              </div>
-              <div formGroupName="dimensions">
-                <h5>Dimensions</h5>
-                <div class="form-group dim">
-                  <label>Length
-                    <input class="form-control dim-item" formControlName="l" type="number" step="1" min="1" />
-                  </label>
-                  <label>Width
-                    <input class="form-control dim-item" formControlName="w" type="number" step="1" min="1" />
-                  </label>
-                  <label>Height
-                    <input class="form-control dim-item" formControlName="h" type="number" step="1" min="1" />
-                  </label>
-                </div>
-              </div>
-              <div class="card m-1 p-1 bg-warning" *ngIf="errlineItem">{{errlineItem}}</div>
-              <button type="button" class="btn btn-success" (click)="addItem()">Add</button>
-              <button type="button" class="btn btn-warning" (click)="removeItem()">Remove Last</button>
-
-            </form>
-          </div>
-        </div>
+    <div class="card bg-main my-1">
+      <div class="card-header bg-second text-light">
+        <h5>Items</h5>
       </div>
-      <!--Line Items List-->
-      <div class="col-sm-12 col-md-8 col-lg-6">
-        <div class="card" *ngIf="lineItems.length > 0">
-          <div class="card-header">
-            <h5>Line Items</h5>
+      <div class="card-body">
+        <form [formGroup]="lineItemForm">
+
+          <div class="form-group">
+            <label class="center-block">Quantity
+              <input class="form-control dim-item" formControlName="quantity" type="number" min="1" step="1" />
+            </label>
+            <label class="center-block">Weight (lb)
+              <input class="form-control dim-item" formControlName="weight" type="number" min="1" />
+            </label>
+            <label class="center-block">Packaging Type
+              <select class="form-control" formControlName="packtype" required>
+                <option value="Box">Box</option>
+                <option value="Pallet">Pallet</option>
+              </select>
+            </label>
           </div>
-          <div class="card-body">
-            <ul class="list-group">
-              <li *ngFor="let l of lineItems" class="alert alert-info">
-                Quantity:
-                <div class="badge badge-primary">{{l.quantity}}</div>
-                Dimensions:
-                <div class="badge badge-danger">{{l.dimensions.l}}' x {{l.dimensions.w}}' x {{l.dimensions.h}}'</div>
-                Weight (lb):
-                <div class="badge badge-primary">{{l.weight}} lb</div>
-                Packaging Type:
-                <div class="badge badge-warning">{{l.packtype}}</div>
-              </li>
-            </ul>
+          <div formGroupName="dimensions">
+            <h5>Dimensions</h5>
+            <div class="form-group dim">
+              <label>Length
+                <input class="form-control dim-item" formControlName="l" type="number" step="1" min="1" />
+              </label>
+              <label>Width
+                <input class="form-control dim-item" formControlName="w" type="number" step="1" min="1" />
+              </label>
+              <label>Height
+                <input class="form-control dim-item" formControlName="h" type="number" step="1" min="1" />
+              </label>
+            </div>
           </div>
-        </div>
+          <div class="alert alert-warning" *ngIf="errlineItem">{{errlineItem}}</div>
+          <div class="alert alert-success" *ngIf="addSuccess">{{addSuccess}}</div>
+          <!-- <div class="alert alert-danger" *ngIf="addSuccess.length <= 0">Item not added</div> -->
+          <button type="button" class="btn btn-success font-weight-bold text-light m-1" (click)="addItem()">Add</button>
+          <button type="button" class="btn btn-danger font-weight-bold text-light m-1" (click)="removeItem()">Remove Last</button>
+
+        </form>
       </div>
     </div>
-    <div class="row my-4">
+    <div class="card my-1" *ngIf="lineItems.length > 0">
+      <div class="card-header bg-second text-light border-0">
+        <h5>Item Inventory</h5>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <li *ngFor="let l of lineItems" class="alert alert-info">
+            Quantity:
+            <div class="badge badge-primary">{{l.quantity}}</div>
+            Dimensions:
+            <div class="badge badge-danger">{{l.dimensions.l}}' x {{l.dimensions.w}}' x {{l.dimensions.h}}'</div>
+            Weight (lb):
+            <div class="badge badge-primary">{{l.weight}} lb</div>
+            Packaging Type:
+            <div class="badge badge-warning">{{l.packtype}}</div>
+          </li>
+        </ul>
+      </div>
     </div>
+
   </div>
 </div>

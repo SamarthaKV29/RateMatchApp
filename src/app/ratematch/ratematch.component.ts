@@ -17,6 +17,7 @@ export class RatematchComponent {
   criterias: RMC[] = [];
 
   errlineItem = "";
+  addSuccess = null;
   states = [];
   zips = [];
 
@@ -28,7 +29,18 @@ export class RatematchComponent {
   selectedOrigin: RLocation = null;
   selectedDest: RLocation = null;
   results: ResultI[] = [];
-  filteredRes: ResultI[] = [];
+  filteredRes: ResultI[] = [
+    // {
+    //   calctype: "QUANTITY",
+    //   carriername: "B Chomsky",
+    //   price: 10
+    // },
+    // {
+    //   calctype: "QUANTITY",
+    //   carriername: "Z Foorder",
+    //   price: 5
+    // }
+  ];
 
   constructor(private dataService: DataService, private fb: FormBuilder) {
     this.dataService.getRates().subscribe(
@@ -126,10 +138,15 @@ export class RatematchComponent {
       li['weight'] = this.lineItemForm.get('weight').value;
       if (li.quantity > 0 && li.dimensions.l > 0 && li.dimensions.h > 0 && li.dimensions.w > 0 && li.weight > 0) {
         this.lineItems.push(li);
+        this.addSuccess = "Added successfully!";
+        setTimeout(() => {
+          this.addSuccess = null;
+        }, 1000);
         return;
       }
     }
     this.errlineItem = "Please check all the details.";
+    this.addSuccess = null;
   }
 
   removeItem() {
@@ -155,6 +172,7 @@ export class RatematchComponent {
       let weight = this.lineItems.map(x => x.weight).reduce(this.redSum, 0);
       this.results = res.map(x => this.getPrice(x, quantity, weight));
       this.filteredRes = this.results.sort(this.cmprRate);
+      this.reSort();
     }
     else {
       this.errlineItem = "Please enter some line items.";
@@ -163,7 +181,7 @@ export class RatematchComponent {
   }
 
   cmprRate(x: ResultI, y: ResultI) {
-    return (x.price > y.price ? x.price : y.price);
+    return x.price - y.price;
   }
 
   redSum(a, b) {
@@ -189,8 +207,15 @@ export class RatematchComponent {
 
   searchItems() {
     let query = this.lineItemSearch.get('squery').value;
-    this.filteredRes = this.results.filter(x => x.carriername.toLowerCase().indexOf(query) >= 0).sort(this.cmprRate)
-
+    this.filteredRes = this.results.filter(x => x.carriername.toLowerCase().indexOf(query) >= 0);
+  }
+  reSort() {
+    let opt = parseInt(this.lineItemSearch.get('selectSort').value);
+    switch (opt) {
+      case 1: this.filteredRes.sort((x, y) => (x.carriername > y.carriername ? 1 : -1)); break;
+      case 2: this.filteredRes.sort(this.cmprRate); break;
+      default: break;
+    }
   }
 
 }

@@ -1,4 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background-color: lightsteelblue;
+    background-color: lightblue;
+}
+.bg-main{
+    background: #ECE9E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.bg-prim{
+    background: #DAD299;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.bg-second{
+    background: #606c88;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+}
+
+.card{
+    border: none;
+    box-shadow: 1px 1px 10px -3px rgba(0, 0, 0, 0.78);
+}
+
+select option{
+    font-weight: bold;
 }
