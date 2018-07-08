@@ -8,7 +8,7 @@
           <form class="form-inline" [formGroup]="lineItemSearch">
             <input class="form-control mr-sm-2" formControlName="squery" placeholder="Search" aria-label="Search" (keypress)="searchItems()"
               (keyup)="searchItems()" />
-            <i class="material-icons">search</i>
+            <i class="material-icons d-none d-xs-none d-sm-none d-md-block d-lg-block">search</i>
           </form>
         </nav>
       </div>
@@ -203,7 +203,7 @@
                 <div class="badge badge-primary">{{l.quantity}}</div>
                 Dimensions:
                 <div class="badge badge-danger">{{l.dimensions.l}}' x {{l.dimensions.w}}' x {{l.dimensions.h}}'</div>
-                Weight:
+                Weight (lb):
                 <div class="badge badge-primary">{{l.weight}} lb</div>
                 Packaging Type:
                 <div class="badge badge-warning">{{l.packtype}}</div>
