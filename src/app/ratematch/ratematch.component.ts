@@ -153,12 +153,16 @@ export class RatematchComponent {
       let quantity = this.lineItems.map(x => x.quantity).reduce(this.redSum, 0);
       let weight = this.lineItems.map(x => x.weight).reduce(this.redSum, 0);
       this.results = res.map(x => this.getPrice(x, quantity, weight));
-      this.filteredRes = this.results.sort((x, y) => { return (x.price > y.price ? x.price : y.price) });
+      this.filteredRes = this.results.sort(this.cmprRate);
     }
     else {
       this.errlineItem = "Please enter some line items.";
     }
 
+  }
+
+  cmprRate(x: ResultI, y: ResultI) {
+    return (x.price > y.price ? x.price : y.price);
   }
 
   redSum(a, b) {
@@ -184,7 +188,7 @@ export class RatematchComponent {
 
   searchItems() {
     let query = this.lineItemSearch.get('squery').value;
-    this.filteredRes = this.results.filter(x => x.carriername.toLowerCase().indexOf(query) >= 0)
+    this.filteredRes = this.results.filter(x => x.carriername.toLowerCase().indexOf(query) >= 0).sort(this.cmprRate)
 
   }
 
