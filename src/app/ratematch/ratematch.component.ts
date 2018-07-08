@@ -153,7 +153,7 @@ export class RatematchComponent {
       let quantity = this.lineItems.map(x => x.quantity).reduce(this.redSum, 0);
       let weight = this.lineItems.map(x => x.weight).reduce(this.redSum, 0);
       this.results = res.map(x => this.getPrice(x, quantity, weight));
-      this.filteredRes = this.results;
+      this.filteredRes = this.results.sort((x, y) => { return (x.price > y.price ? x.price : y.price) });
     }
     else {
       this.errlineItem = "Please enter some line items.";
