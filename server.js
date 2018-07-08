@@ -53,8 +53,8 @@ app.get('', (req, res) => {
 
 
 app.use((req, res, next) => {
-    //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
-    res.setHeader('Access-Control-Allow-Origin', 'https://kuebixratematch.herokuapp.com');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+    //res.setHeader('Access-Control-Allow-Origin', 'https://kuebixratematch.herokuapp.com');
     res.setHeader('Access-Control-Allow-Methods', 'GET');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     next();

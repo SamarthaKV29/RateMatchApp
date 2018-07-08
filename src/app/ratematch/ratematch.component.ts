@@ -70,7 +70,8 @@ export class RatematchComponent {
       packtype: 'Box',
     });
     this.lineItemSearch = this.fb.group({
-      squery: ''
+      squery: '',
+      selectSort: 1
     });
   }
 
