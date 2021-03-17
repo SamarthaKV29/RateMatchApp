@@ -3233,10 +3233,10 @@ Zone.__load_patch('ZoneAwarePromise', function (global, Zone, api) {
                 reject = rej;
             });
             function onResolve(value) {
-                promise && (promise = null || resolve(value));
+                promise && (promise =  false || resolve(value));
             }
             function onReject(error) {
-                promise && (promise = null || reject(error));
+                promise && (promise =  false || reject(error));
             }
             for (var _i = 0, values_1 = values; _i < values_1.length; _i++) {
                 var value = values_1[_i];
@@ -5395,7 +5395,7 @@ function webpackEmptyAsyncContext(req) {
 	// Here Promise.resolve().then() is used instead of new Promise() to prevent
 	// uncaught exception popping up in devtools
 	return Promise.resolve().then(function() {
-		var e = new Error('Cannot find module "' + req + '".');
+		var e = new Error("Cannot find module '" + req + "'");
 		e.code = 'MODULE_NOT_FOUND';
 		throw e;
 	});
@@ -5429,6 +5429,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
     { path: '', component: _ratematch_ratematch_component__WEBPACK_IMPORTED_MODULE_2__["RatematchComponent"], pathMatch: 'full' },
 ];
@@ -5437,7 +5438,7 @@ var AppRoutingModule = /** @class */ (function () {
     }
     AppRoutingModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes, { preloadingStrategy: _angular_router__WEBPACK_IMPORTED_MODULE_1__["PreloadAllModules"] })],
             exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
         })
     ], AppRoutingModule);
@@ -5455,7 +5456,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -5466,7 +5467,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container py-4\">\r\n    <div class=\"wrapper d-block \">\r\n        <div class=\"card\">\r\n            <div class=\"card-header\">\r\n                <h3 class=\"\">Rate Match Calculator</h3>\r\n            </div>\r\n            <div class=\"card-body\">\r\n                <router-outlet></router-outlet>\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container py-4\">\r\n    <div class=\"wrapper d-block \">\r\n        <div class=\"card bg-prim rounded\">\r\n            <div class=\"card-header text-light bg-dark \">\r\n                <h3 class=\"\">Rate Match Calculator</h3>\r\n            </div>\r\n            <div class=\"card-body\">\r\n                <router-outlet></router-outlet>\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -5581,7 +5582,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".dim{\r\n    display: flex;\r\n}\r\n.dim-item{\r\n    display: inline-flex;\r\n}\r\nlabel{\r\n    font-weight: 500;\r\n}\r\n.list-group li.alert.alert-info{\r\n    padding: 1%;\r\n    font-size: 0.9em;\r\n    font-weight: 500;\r\n}\r\n.card-body{\r\n    min-height: 300px;\r\n}"
+module.exports = ".dim{\r\n    display: flex;\r\n}\r\n.dim-item{\r\n    display: inline-flex;\r\n}\r\nlabel{\r\n    font-weight: 500;\r\n}\r\n.list-group li.alert.alert-info{\r\n    padding: 1%;\r\n    font-size: 0.9em;\r\n    font-weight: 500;\r\n}\r\n.card-body{\r\n    min-height: 300px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmF0ZW1hdGNoL3JhdGVtYXRjaC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksYUFBYTtBQUNqQjtBQUNBO0lBQ0ksb0JBQW9CO0FBQ3hCO0FBRUE7SUFDSSxnQkFBZ0I7QUFDcEI7QUFFQTtJQUNJLFdBQVc7SUFDWCxnQkFBZ0I7SUFDaEIsZ0JBQWdCO0FBQ3BCO0FBRUE7SUFDSSxpQkFBaUI7QUFDckIiLCJmaWxlIjoic3JjL2FwcC9yYXRlbWF0Y2gvcmF0ZW1hdGNoLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZGlte1xyXG4gICAgZGlzcGxheTogZmxleDtcclxufVxyXG4uZGltLWl0ZW17XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtZmxleDtcclxufVxyXG5cclxubGFiZWx7XHJcbiAgICBmb250LXdlaWdodDogNTAwO1xyXG59XHJcblxyXG4ubGlzdC1ncm91cCBsaS5hbGVydC5hbGVydC1pbmZve1xyXG4gICAgcGFkZGluZzogMSU7XHJcbiAgICBmb250LXNpemU6IDAuOWVtO1xyXG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcclxufVxyXG5cclxuLmNhcmQtYm9keXtcclxuICAgIG1pbi1oZWlnaHQ6IDMwMHB4O1xyXG59Il19 */"
 
 /***/ }),
 
@@ -5592,7 +5593,7 @@ module.exports = ".dim{\r\n    display: flex;\r\n}\r\n.dim-item{\r\n    display:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row py-1 mx-auto\">\n  <!--Results View-->\n  <div class=\"col-sm-12 col-md-12 col-lg-12\" *ngIf=\"results.length > 0\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        <nav class=\"navbar navbar-light bg-light\">\n          <h5 class=\"navbar-brand\">Results</h5>\n          <form class=\"form-inline\" [formGroup]=\"lineItemSearch\">\n            <input class=\"form-control mr-sm-2\" formControlName=\"squery\" placeholder=\"Search\" aria-label=\"Search\" (keypress)=\"searchItems()\"\n              (keyup)=\"searchItems()\" />\n            <i class=\"material-icons\">search</i>\n          </form>\n        </nav>\n      </div>\n      <div class=\"card-body\">\n        <ul>\n          <li *ngFor=\"let res of filteredRes\">\n            <div class=\"alert alert-info rounded font-weight-bold\"> {{res.carriername}}\n              <div class=\"badge badge-pill badge-warning\"> $ {{res.price}}</div>\n              <div class=\"badge badge-light\"> Type: {{res.calctype}}</div>\n            </div>\n          </li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"row  py-1 mx-auto\">\n\n  <div class=\"col-xs-12 col-sm-10 col-md-6 col-lg-6\">\n    <nav>\n      <div class=\"nav nav-tabs\" id=\"nav-tab\" role=\"tablist\">\n        <a class=\"nav-item nav-link active\" id=\"nav-home-tab\" data-toggle=\"tab\" href=\"#origin\" role=\"tab\" aria-controls=\"nav-origin\"\n          aria-selected=\"true\">Origin</a>\n        <a class=\"nav-item nav-link\" id=\"nav-profile-tab\" data-toggle=\"tab\" href=\"#destination\" role=\"tab\" aria-controls=\"nav-dest\"\n          aria-selected=\"false\">Destination</a>\n      </div>\n    </nav>\n    <div class=\"tab-content\">\n      <div class=\"tab-pane fade show active\" id=\"origin\" role=\"tabpanel\" aria-labelledby=\"nav-origin-tab\">\n        <div class=\"row p-1\">\n          <!--Origin Form-->\n          <div class=\"col-sm-6 col-md-6 col-lg-5\">\n            <div class=\"card\">\n              <div class=\"card-header\">\n                <h5>Origin</h5>\n              </div>\n              <div class=\"card-body\">\n                <form [formGroup]=\"originForm\">\n\n                  <div class=\"form-group\">\n                    <label class=\"center-block \">State:\n                      <select class=\"form-control\" formControlName=\"state\" (change)=\"getZips()\">\n                        <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n                      </select>\n                    </label>\n                  </div>\n                  <div class=\"form-group\" *ngIf=\"zips.length > 0 && origin\" (change)=\"setOrigin()\">\n                    <label class=\"center-block\">Zip:\n                      <select class=\"form-control\" formControlName=\"zip\">\n                        <option *ngFor=\"let zip of zips\" [value]=\"zip\">{{zip.split(\"|\")}}</option>\n                      </select>\n                    </label>\n                  </div>\n                </form>\n              </div>\n            </div>\n          </div>\n          <!--View Origin details Form-->\n          <div class=\"col col-xs-6 col-sm-6\" *ngIf=\"selectedOrigin\">\n            <div class=\"card\">\n              <div class=\"card-header\">\n                <h5>Origin Details</h5>\n              </div>\n              <div class=\"card-body\">\n                <p>\n                  <strong>City</strong> {{selectedOrigin.city}}\n                </p>\n                <p>\n                  <strong>State</strong> {{selectedOrigin.state}}\n                </p>\n                <p>\n                  <strong>Zip</strong> {{selectedOrigin.postal_code}}\n                </p>\n                <button class=\"btn btn-success\" (click)=\"genRes()\">Generate Results</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"tab-pane fade\" id=\"destination\" role=\"tabpanel\" aria-labelledby=\"nav-dest-tab\">\n        <div class=\"row p-1\">\n          <!--Dest Form-->\n          <div class=\"col-sm-6 col-md-6 col-lg-5\">\n            <div class=\"card\">\n              <div class=\"card-header\">\n                <h5>Destination</h5>\n              </div>\n              <div class=\"card-body\">\n                <form [formGroup]=\"destForm\">\n                  <div class=\"form-group\">\n                    <label class=\"center-block \">State:\n                      <select class=\"form-control\" formControlName=\"state\" (change)=\"getZips()\">\n                        <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n                      </select>\n                    </label>\n                  </div>\n                  <div class=\"form-group\" *ngIf=\"zips.length > 0 && !origin\" (change)=\"setDest()\">\n                    <label class=\"center-block\">Zip:\n                      <select class=\"form-control\" formControlName=\"zip\">\n                        <option *ngFor=\"let zip of zips\" [value]=\"zip\">{{zip.split(\"|\")}}</option>\n                      </select>\n                    </label>\n                  </div>\n                </form>\n              </div>\n            </div>\n          </div>\n          <!--View Dest details Form-->\n          <div class=\"col col-xs-6 col-sm-6\" *ngIf=\"selectedDest\">\n            <div class=\"card\">\n              <div class=\"card-header\">\n                <h5>Destination Details</h5>\n              </div>\n              <div class=\"card-body\">\n                <p>\n                  <strong>City</strong> {{selectedDest.city}}\n                </p>\n                <p>\n                  <strong>State</strong> {{selectedDest.state}}\n                </p>\n                <p>\n                  <strong>Zip</strong> {{selectedDest.postal_code}}\n                </p>\n                <button class=\"btn btn-success\" (click)=\"genRes()\">Generate Results</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n\n  <div class=\"col-xs-12 col-sm-10 col-md-6 col-lg-6\">\n    <div class=\"row\">\n      <!--Item Form-->\n      <div class=\"col-sm-12 col-md-8 col-lg-6\">\n        <div class=\"card\">\n          <div class=\"card-header\">\n            <h5>Item Details</h5>\n          </div>\n          <div class=\"card-body\">\n            <form [formGroup]=\"lineItemForm\">\n\n              <div class=\"form-group\">\n                <label class=\"center-block\">Quantity\n                  <input class=\"form-control dim-item\" formControlName=\"quantity\" type=\"number\" min=\"1\" step=\"1\" />\n                </label>\n                <label class=\"center-block\">Weight\n                  <input class=\"form-control dim-item\" formControlName=\"weight\" type=\"number\" min=\"1\" />\n                </label>\n                <label class=\"center-block\">Packaging Type\n                  <select class=\"form-control\" formControlName=\"packtype\" required>\n                    <option value=\"Box\">Box</option>\n                    <option value=\"Pallet\">Pallet</option>\n                  </select>\n                </label>\n              </div>\n              <div formGroupName=\"dimensions\">\n                <h5>Dimensions</h5>\n                <div class=\"form-group dim\">\n                  <label>Length\n                    <input class=\"form-control dim-item\" formControlName=\"l\" type=\"number\" step=\"1\" min=\"1\" />\n                  </label>\n                  <label>Width\n                    <input class=\"form-control dim-item\" formControlName=\"w\" type=\"number\" step=\"1\" min=\"1\" />\n                  </label>\n                  <label>Height\n                    <input class=\"form-control dim-item\" formControlName=\"h\" type=\"number\" step=\"1\" min=\"1\" />\n                  </label>\n                </div>\n              </div>\n              <div class=\"card m-1 p-1 bg-warning\" *ngIf=\"errlineItem\">{{errlineItem}}</div>\n              <button type=\"button\" class=\"btn btn-success\" (click)=\"addItem()\">Add</button>\n              <button type=\"button\" class=\"btn btn-warning\" (click)=\"removeItem()\">Remove Last</button>\n\n            </form>\n          </div>\n        </div>\n      </div>\n      <!--Line Items List-->\n      <div class=\"col-sm-12 col-md-8 col-lg-6\">\n        <div class=\"card\" *ngIf=\"lineItems.length > 0\">\n          <div class=\"card-header\">\n            <h5>Line Items</h5>\n          </div>\n          <div class=\"card-body\">\n            <ul class=\"list-group\">\n              <li *ngFor=\"let l of lineItems\" class=\"alert alert-info\">\n                Quantity:\n                <div class=\"badge badge-primary\">{{l.quantity}}</div>\n                Dimensions:\n                <div class=\"badge badge-danger\">{{l.dimensions.l}}' x {{l.dimensions.w}}' x {{l.dimensions.h}}'</div>\n                Weight:\n                <div class=\"badge badge-primary\">{{l.weight}} lb</div>\n                Packaging Type:\n                <div class=\"badge badge-warning\">{{l.packtype}}</div>\n              </li>\n            </ul>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"row my-4\">\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"row py-1 mx-auto\">\r\n  <!--Results View-->\r\n  <div class=\"col-sm-12 col-md-12 col-lg-12\" *ngIf=\"results.length > 0\">\r\n    <div class=\"card bg-main\">\r\n      <div class=\"card-header bg-second text-light\">\r\n        <nav class=\"navbar\">\r\n          <h5 class=\"navbar-brand\">Results</h5>\r\n          <form class=\"form-inline\" [formGroup]=\"lineItemSearch\">\r\n            <div class=\"input-group\">\r\n              <div class=\"input-group-prepend\">\r\n                <i class=\"material-icons d-none d-xs-none d-sm-none d-md-block d-lg-block input-group-text\">search</i>\r\n              </div>\r\n              <input class=\"form-control mr-sm-2\" formControlName=\"squery\" placeholder=\"Search\" aria-label=\"Search\" (keypress)=\"searchItems()\"\r\n                (keyup)=\"searchItems()\">\r\n            </div>\r\n            <div class=\"input-group\">\r\n              <div class=\"input-group-prepend\">\r\n                <i class=\"material-icons d-none d-xs-none d-sm-none d-md-block d-lg-block input-group-text\">reorder</i>\r\n              </div>\r\n              <select formControlName=\"selectSort\" class=\"form-control mr-sm-2\" placeholder=\"Sorting\" aria-label=\"Sorting\" (change)=\"reSort()\">\r\n\r\n                <option value=\"1\">\r\n                  by Name\r\n                </option>\r\n                <option value=\"2\">\r\n                  by Price\r\n                </option>\r\n              </select>\r\n            </div>\r\n          </form>\r\n        </nav>\r\n      </div>\r\n      <div class=\"card-body\">\r\n        <ul>\r\n          <li *ngFor=\"let res of filteredRes\">\r\n            <div class=\"alert alert-info rounded font-weight-bold\"> {{res.carriername}}\r\n              <div class=\"badge badge-pill badge-warning\"> $ {{res.price}}</div>\r\n              <div class=\"badge badge-light\"> Type: {{res.calctype}}</div>\r\n            </div>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"row  py-1 mx-auto\">\r\n  <div class=\"col-xs-12 col-sm-10 col-md-6 col-lg-6\">\r\n    <div class=\"card\">\r\n      <div class=\"card-header bg-second text-light border-0\">\r\n        <h5>Item Location</h5>\r\n      </div>\r\n\r\n      <div class=\"card-body\">\r\n        <nav>\r\n          <div class=\"nav nav-tabs\" id=\"nav-tab\" role=\"tablist\">\r\n            <a class=\"nav-item nav-link font-weight-bold border-0 active\" id=\"nav-home-tab\" data-toggle=\"tab\" href=\"#origin\" role=\"tab\"\r\n              aria-controls=\"nav-origin\" aria-selected=\"true\">Origin</a>\r\n            <a class=\"nav-item nav-link font-weight-bold border-0\" id=\"nav-profile-tab\" data-toggle=\"tab\" href=\"#destination\" role=\"tab\"\r\n              aria-controls=\"nav-dest\" aria-selected=\"false\">Destination</a>\r\n          </div>\r\n        </nav>\r\n        <div class=\"tab-content \">\r\n          <div class=\"tab-pane fade show active bg-main rounded\" id=\"origin\" role=\"tabpanel\" aria-labelledby=\"nav-origin-tab\">\r\n            <div class=\"row p-1\">\r\n              <!--Origin Form-->\r\n              <div class=\"col-sm-6 col-md-6 col-lg-5\">\r\n                <form [formGroup]=\"originForm\" class=\"m-2 p-1\">\r\n\r\n                  <div class=\"form-group\">\r\n                    <label class=\"center-block \">State:\r\n                      <select class=\"form-control\" formControlName=\"state\" (change)=\"getZips()\">\r\n                        <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\r\n                      </select>\r\n                    </label>\r\n                  </div>\r\n                  <div class=\"form-group\" *ngIf=\"zips.length > 0 && origin\" (change)=\"setOrigin()\">\r\n                    <label class=\"center-block\">Zip:\r\n                      <select class=\"form-control\" formControlName=\"zip\">\r\n                        <option *ngFor=\"let zip of zips\" [value]=\"zip\">{{zip.split(\"|\")}}</option>\r\n                      </select>\r\n                    </label>\r\n                  </div>\r\n                </form>\r\n              </div>\r\n              <!--View Origin details Form-->\r\n              <div class=\"col col-xs-6 col-sm-6\" *ngIf=\"selectedOrigin\">\r\n                <p>\r\n                  <strong>City</strong> {{selectedOrigin.city}}\r\n                </p>\r\n                <p>\r\n                  <strong>State</strong> {{selectedOrigin.state}}\r\n                </p>\r\n                <p>\r\n                  <strong>Zip</strong> {{selectedOrigin.postal_code}}\r\n                </p>\r\n                <button class=\"btn btn-success\" (click)=\"genRes()\">Generate Results</button>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"tab-pane fade bg-main rounded\" id=\"destination\" role=\"tabpanel\" aria-labelledby=\"nav-dest-tab\">\r\n            <div class=\"row p-1 \">\r\n              <!--Dest Form-->\r\n              <div class=\"col-sm-6 col-md-6 col-lg-5\">\r\n                <form [formGroup]=\"destForm\" class=\"m-2 p-1\">\r\n                  <div class=\"form-group\">\r\n                    <label class=\"center-block \">State:\r\n                      <select class=\"form-control\" formControlName=\"state\" (change)=\"getZips()\">\r\n                        <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\r\n                      </select>\r\n                    </label>\r\n                  </div>\r\n                  <div class=\"form-group\" *ngIf=\"zips.length > 0 && !origin\" (change)=\"setDest()\">\r\n                    <label class=\"center-block\">Zip:\r\n                      <select class=\"form-control\" formControlName=\"zip\">\r\n                        <option *ngFor=\"let zip of zips\" [value]=\"zip\">{{zip.split(\"|\")}}</option>\r\n                      </select>\r\n                    </label>\r\n                  </div>\r\n                </form>\r\n              </div>\r\n              <!--View Dest details Form-->\r\n              <div class=\"col col-xs-6 col-sm-6\" *ngIf=\"selectedDest\">\r\n                <p>\r\n                  <strong>City</strong> {{selectedDest.city}}\r\n                </p>\r\n                <p>\r\n                  <strong>State</strong> {{selectedDest.state}}\r\n                </p>\r\n                <p>\r\n                  <strong>Zip</strong> {{selectedDest.postal_code}}\r\n                </p>\r\n                <button class=\"btn btn-success\" (click)=\"genRes()\">Generate Results</button>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n  <div class=\"col-xs-12 col-sm-10 col-md-6 col-lg-6\">\r\n    <div class=\"card bg-main my-1\">\r\n      <div class=\"card-header bg-second text-light\">\r\n        <h5>Items</h5>\r\n      </div>\r\n      <div class=\"card-body\">\r\n        <form [formGroup]=\"lineItemForm\">\r\n\r\n          <div class=\"form-group\">\r\n            <label class=\"center-block\">Quantity\r\n              <input class=\"form-control dim-item\" formControlName=\"quantity\" type=\"number\" min=\"1\" step=\"1\" />\r\n            </label>\r\n            <label class=\"center-block\">Weight (lb)\r\n              <input class=\"form-control dim-item\" formControlName=\"weight\" type=\"number\" min=\"1\" />\r\n            </label>\r\n            <label class=\"center-block\">Packaging Type\r\n              <select class=\"form-control\" formControlName=\"packtype\" required>\r\n                <option value=\"Box\">Box</option>\r\n                <option value=\"Pallet\">Pallet</option>\r\n              </select>\r\n            </label>\r\n          </div>\r\n          <div formGroupName=\"dimensions\">\r\n            <h5>Dimensions</h5>\r\n            <div class=\"form-group dim\">\r\n              <label>Length\r\n                <input class=\"form-control dim-item\" formControlName=\"l\" type=\"number\" step=\"1\" min=\"1\" />\r\n              </label>\r\n              <label>Width\r\n                <input class=\"form-control dim-item\" formControlName=\"w\" type=\"number\" step=\"1\" min=\"1\" />\r\n              </label>\r\n              <label>Height\r\n                <input class=\"form-control dim-item\" formControlName=\"h\" type=\"number\" step=\"1\" min=\"1\" />\r\n              </label>\r\n            </div>\r\n          </div>\r\n          <div class=\"alert alert-warning\" *ngIf=\"errlineItem\">{{errlineItem}}</div>\r\n          <div class=\"alert alert-success\" *ngIf=\"addSuccess\">{{addSuccess}}</div>\r\n          <!-- <div class=\"alert alert-danger\" *ngIf=\"addSuccess.length <= 0\">Item not added</div> -->\r\n          <button type=\"button\" class=\"btn btn-success font-weight-bold text-light m-1\" (click)=\"addItem()\">Add</button>\r\n          <button type=\"button\" class=\"btn btn-danger font-weight-bold text-light m-1\" (click)=\"removeItem()\">Remove Last</button>\r\n\r\n        </form>\r\n      </div>\r\n    </div>\r\n    <div class=\"card my-1\" *ngIf=\"lineItems.length > 0\">\r\n      <div class=\"card-header bg-second text-light border-0\">\r\n        <h5>Item Inventory</h5>\r\n      </div>\r\n      <div class=\"card-body\">\r\n        <ul class=\"list-group\">\r\n          <li *ngFor=\"let l of lineItems\" class=\"alert alert-info\">\r\n            Quantity:\r\n            <div class=\"badge badge-primary\">{{l.quantity}}</div>\r\n            Dimensions:\r\n            <div class=\"badge badge-danger\">{{l.dimensions.l}}' x {{l.dimensions.w}}' x {{l.dimensions.h}}'</div>\r\n            Weight (lb):\r\n            <div class=\"badge badge-primary\">{{l.weight}} lb</div>\r\n            Packaging Type:\r\n            <div class=\"badge badge-warning\">{{l.packtype}}</div>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -5631,6 +5632,7 @@ var RatematchComponent = /** @class */ (function () {
         this.locations = [];
         this.criterias = [];
         this.errlineItem = "";
+        this.addSuccess = null;
         this.states = [];
         this.zips = [];
         this.origin = true;
@@ -5669,7 +5671,8 @@ var RatematchComponent = /** @class */ (function () {
             packtype: 'Box',
         });
         this.lineItemSearch = this.fb.group({
-            squery: ''
+            squery: '',
+            selectSort: 1
         });
     };
     RatematchComponent.prototype.getZips = function () {
@@ -5700,6 +5703,7 @@ var RatematchComponent = /** @class */ (function () {
         this.selectedOrigin = null;
     };
     RatematchComponent.prototype.addItem = function () {
+        var _this = this;
         if (this.lineItemForm.valid) {
             this.errlineItem = "";
             var li = {
@@ -5720,10 +5724,15 @@ var RatematchComponent = /** @class */ (function () {
             li['weight'] = this.lineItemForm.get('weight').value;
             if (li.quantity > 0 && li.dimensions.l > 0 && li.dimensions.h > 0 && li.dimensions.w > 0 && li.weight > 0) {
                 this.lineItems.push(li);
+                this.addSuccess = "Added successfully!";
+                setTimeout(function () {
+                    _this.addSuccess = null;
+                }, 1000);
                 return;
             }
         }
         this.errlineItem = "Please check all the details.";
+        this.addSuccess = null;
     };
     RatematchComponent.prototype.removeItem = function () {
         if (this.lineItems.length > 0) {
@@ -5745,11 +5754,15 @@ var RatematchComponent = /** @class */ (function () {
             var quantity_1 = this.lineItems.map(function (x) { return x.quantity; }).reduce(this.redSum, 0);
             var weight_1 = this.lineItems.map(function (x) { return x.weight; }).reduce(this.redSum, 0);
             this.results = res.map(function (x) { return _this.getPrice(x, quantity_1, weight_1); });
-            this.filteredRes = this.results;
+            this.filteredRes = this.results.sort(this.cmprRate);
+            this.reSort();
         }
         else {
             this.errlineItem = "Please enter some line items.";
         }
+    };
+    RatematchComponent.prototype.cmprRate = function (x, y) {
+        return x.price - y.price;
     };
     RatematchComponent.prototype.redSum = function (a, b) {
         return a + b;
@@ -5765,7 +5778,7 @@ var RatematchComponent = /** @class */ (function () {
         else {
             return {
                 carriername: r.carrier_name,
-                price: parseFloat((r.rate * w).toPrecision(3)),
+                price: parseFloat((r.rate * w * q).toPrecision(3)),
                 calctype: r.calculation_type
             };
         }
@@ -5773,6 +5786,18 @@ var RatematchComponent = /** @class */ (function () {
     RatematchComponent.prototype.searchItems = function () {
         var query = this.lineItemSearch.get('squery').value;
         this.filteredRes = this.results.filter(function (x) { return x.carriername.toLowerCase().indexOf(query) >= 0; });
+    };
+    RatematchComponent.prototype.reSort = function () {
+        var opt = parseInt(this.lineItemSearch.get('selectSort').value);
+        switch (opt) {
+            case 1:
+                this.filteredRes.sort(function (x, y) { return (x.carriername > y.carriername ? 1 : -1); });
+                break;
+            case 2:
+                this.filteredRes.sort(this.cmprRate);
+                break;
+            default: break;
+        }
     };
     RatematchComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -5982,7 +6007,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\samar\Desktop\Kuebix Code Test\Kuebix Code Test\kuebix-app\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\Projects\RateMatchApp\src\main.ts */"./src/main.ts");
 
 
 /***/ })
